@@ -1,0 +1,134 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 2,
+    "pending": 0,
+    "failures": 2,
+    "start": "2019-07-04T00:35:58.364Z",
+    "end": "2019-07-04T00:40:06.640Z",
+    "duration": 248276,
+    "testsRegistered": 4,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "danger",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "83a9db55-92b1-46ed-979b-7124bbd47b92",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "b1602e5b-9c32-4b06-8036-1e6ea4f03142",
+        "title": "automationtest GIPHY ",
+        "fullFile": "",
+        "file": "",
+        "beforeHooks": [],
+        "afterHooks": [],
+        "tests": [
+          {
+            "title": "Search and found favorite",
+            "fullTitle": "automationtest GIPHY  Search and found favorite",
+            "duration": 59394,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "cy.percySnapshot();\nvar searchBox = new _SearchFunction.default();\nsearchBox.clickSearchBox();\nsearchBox.writeInSearchBox('canada');\nsearchBox.submitSearch();\nsearchBox.clickFavoritePicture1();\ncy.percySnapshot(); //==============================///////",
+            "err": {},
+            "isRoot": false,
+            "uuid": "27b54ba5-16d0-489a-9262-488eebf38122",
+            "isHook": false,
+            "skipped": false
+          },
+          {
+            "title": "test favorite and setting function",
+            "fullTitle": "automationtest GIPHY  test favorite and setting function",
+            "duration": 34949,
+            "state": "failed",
+            "pass": false,
+            "fail": true,
+            "pending": false,
+            "code": "cy.wait(3000);\nvar TestingFavoriteAndSetting = new _FavoriteAndSetting.default(); //home.visit('https://giphy.com/channel/wibrob');    \nTestingFavoriteAndSetting.clickFavorite();\ncy.wait(3000);\nTestingFavoriteAndSetting.cancelFavorite();\nTestingFavoriteAndSetting.clickSetting();\nTestingFavoriteAndSetting.changeChannelfromPublicToPrivate();\nTestingFavoriteAndSetting.changeChannelfromPrivateToPublic();\ncy.percySnapshot();",
+            "err": {
+              "message": "CypressError: Timed out retrying: Expected to find element: '', but never found it.",
+              "estack": "CypressError: Timed out retrying: Expected to find element: '', but never found it.\n    at Object.cypressErr (https://giphy.com/__cypress/runner/cypress_runner.js:84573:11)\n    at Object.throwErr (https://giphy.com/__cypress/runner/cypress_runner.js:84538:18)\n    at Object.throwErrByPath (https://giphy.com/__cypress/runner/cypress_runner.js:84565:17)\n    at retry (https://giphy.com/__cypress/runner/cypress_runner.js:77812:16)\n    at https://giphy.com/__cypress/runner/cypress_runner.js:69764:18\n    at tryCatcher (https://giphy.com/__cypress/runner/cypress_runner.js:133768:23)\n    at Promise._settlePromiseFromHandler (https://giphy.com/__cypress/runner/cypress_runner.js:131786:31)\n    at Promise._settlePromise (https://giphy.com/__cypress/runner/cypress_runner.js:131843:18)\n    at Promise._settlePromise0 (https://giphy.com/__cypress/runner/cypress_runner.js:131888:10)\n    at Promise._settlePromises (https://giphy.com/__cypress/runner/cypress_runner.js:131963:18)\n    at Async._drainQueue (https://giphy.com/__cypress/runner/cypress_runner.js:128692:16)\n    at Async._drainQueues (https://giphy.com/__cypress/runner/cypress_runner.js:128702:10)\n    at Async.drainQueues (https://giphy.com/__cypress/runner/cypress_runner.js:128576:14)\n    at <anonymous>"
+            },
+            "isRoot": false,
+            "uuid": "cfe0269b-e090-4724-a7fa-6d3e7c194825",
+            "isHook": false,
+            "skipped": false
+          },
+          {
+            "title": "test upload Photo",
+            "fullTitle": "automationtest GIPHY  test upload Photo",
+            "duration": 29510,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "//adfadsf\ncy.wait(3000);\ncy.percySnapshot();\nvar TestingUploadPhoto = new _UploadPhoto.default();\nTestingUploadPhoto.clickUpload();\ncy.wait(3000);\nTestingUploadPhoto.pastePhotoOnURL();\nTestingUploadPhoto.uploadInternetPhoto('https://media1.giphy.com/media/3o85xt08p2Y0hanhwQ/source.gif');\nTestingUploadPhoto.writeFQAOnAddTag('FQA test test');\nTestingUploadPhoto.clickUploadTOGIPHY();\ncy.percySnapshot();",
+            "err": {},
+            "isRoot": false,
+            "uuid": "799d9fc1-07b6-4dd1-9b5a-b00c6d636292",
+            "isHook": false,
+            "skipped": false
+          },
+          {
+            "title": "sign out account",
+            "fullTitle": "automationtest GIPHY  sign out account",
+            "duration": 121759,
+            "state": "failed",
+            "pass": false,
+            "fail": true,
+            "pending": false,
+            "code": "cy.wait(3000);\nvar FinalSignOut = new _SignOutPage.default();\nFinalSignOut.clickSignOut();\ncy.percySnapshot();",
+            "err": {
+              "message": "CypressError: cy.exec('percy health-check -p 5338') timed out after waiting 60000ms.",
+              "estack": "CypressError: cy.exec('percy health-check -p 5338') timed out after waiting 60000ms.\n    at Object.cypressErr (https://giphy.com/__cypress/runner/cypress_runner.js:84573:11)\n    at Object.throwErr (https://giphy.com/__cypress/runner/cypress_runner.js:84538:18)\n    at Object.throwErrByPath (https://giphy.com/__cypress/runner/cypress_runner.js:84565:17)\n    at https://giphy.com/__cypress/runner/cypress_runner.js:73611:23\n    at tryCatcher (https://giphy.com/__cypress/runner/cypress_runner.js:133768:23)\n    at https://giphy.com/__cypress/runner/cypress_runner.js:129078:41\n    at tryCatcher (https://giphy.com/__cypress/runner/cypress_runner.js:133768:23)\n    at Promise._settlePromiseFromHandler (https://giphy.com/__cypress/runner/cypress_runner.js:131786:31)\n    at Promise._settlePromise (https://giphy.com/__cypress/runner/cypress_runner.js:131843:18)\n    at Promise._settlePromise0 (https://giphy.com/__cypress/runner/cypress_runner.js:131888:10)\n    at Promise._settlePromises (https://giphy.com/__cypress/runner/cypress_runner.js:131963:18)\n    at Async._drainQueue (https://giphy.com/__cypress/runner/cypress_runner.js:128692:16)\n    at Async._drainQueues (https://giphy.com/__cypress/runner/cypress_runner.js:128702:10)\n    at Async.drainQueues (https://giphy.com/__cypress/runner/cypress_runner.js:128576:14)\n    at <anonymous>"
+            },
+            "isRoot": false,
+            "uuid": "5921982d-a312-4cd1-a0be-eab84787dc7c",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [
+          "27b54ba5-16d0-489a-9262-488eebf38122",
+          "799d9fc1-07b6-4dd1-9b5a-b00c6d636292"
+        ],
+        "failures": [
+          "cfe0269b-e090-4724-a7fa-6d3e7c194825",
+          "5921982d-a312-4cd1-a0be-eab84787dc7c"
+        ],
+        "pending": [],
+        "skipped": [],
+        "duration": 245612,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 2000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 2000
+  },
+  "copyrightYear": 2019
+}

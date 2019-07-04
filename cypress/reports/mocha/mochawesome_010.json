@@ -1,0 +1,80 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2019-07-03T23:35:11.142Z",
+    "end": "2019-07-03T23:36:44.399Z",
+    "duration": 93257,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "danger",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "27912b5e-0df6-4724-8e8c-e4a840dcb8d7",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "d5337c6b-47d2-46a7-9a92-0505d786388b",
+        "title": "Project",
+        "fullFile": "",
+        "file": "",
+        "beforeHooks": [],
+        "afterHooks": [],
+        "tests": [
+          {
+            "title": "login page",
+            "fullTitle": "Project login page",
+            "duration": 93091,
+            "state": "failed",
+            "pass": false,
+            "fail": true,
+            "pending": false,
+            "code": "cy.visit('https://giphy.com/');\ncy.xpath(\"(.//*[normalize-space(text()) and normalize-space(.)='Create'])[1]/following::a[1]\").click();\ncy.get('input[name=\"email\"]').type('wiroger9595@gmail.com');\ncy.get('input[name=\"password\"]').type('12341234'); //cy.xpath(\"(.//*[normalize-space(text()) and normalize-space(.)='or'])[1]/following::button[1]\").click({force: true})\ncy.contains('Log in').click({\n  force: true\n}); //cy.wait(60000)\n//cy.title().should('include', 'Account')\n//-------------------------------------------\n//cy.visit('https://giphy.com/')\ncy.get('input[id=\"search-box\"]').click();\ncy.get('input[id=\"search-box\"]').type('canada');\ncy.xpath(\"(.//*[normalize-space(text()) and normalize-space(.)='Log Out'])[1]/following::img[1]\").click({\n  force: true\n});\ncy.wait(300);\ncy.xpath(\"(.//*[normalize-space(text()) and normalize-space(.)='Newest'])[1]/following::div[33]\").click({\n  force: true\n});\ncy.xpath(\"(.//*[normalize-space(text()) and normalize-space(.)='oh canada'])[1]/following::div[5]\").click({\n  force: true\n}); //---------------setting and favourite----------------\ncy.wait(5000);\ncy.get('input[id=\"search-box\"]').click();\ncy.contains('Favorites').click({\n  force: true\n});\ncy.xpath(\"(.//*[normalize-space(text()) and normalize-space(.)='deal with it'])[1]/following::div[5]\").click({\n  force: true\n});\ncy.xpath(\"(.//*[normalize-space(text()) and normalize-space(.)='Auto Play'])[1]/following::div[12]\").click({\n  force: true\n});\ncy.contains('Settings').click({\n  force: true\n});\ncy.xpath(\"(.//*[normalize-space(text()) and normalize-space(.)='Public'])[1]/following::button[1]\").click({\n  force: true\n});\ncy.xpath(\"(.//*[normalize-space(text()) and normalize-space(.)='Channel Privacy'])[1]/following::button[1]\").click({\n  force: true\n});\ncy.xpath(\"(.//*[normalize-space(text()) and normalize-space(.)='Create'])[1]/following::span[3]\").click({\n  force: true\n}); //---------------upload photo----------------\ncy.xpath(\"(.//*[normalize-space(text()) and normalize-space(.)='Copyright'])[1]/following::span[1]\").click({\n  force: true\n});\ncy.xpath(\"(.//*[normalize-space(text()) and normalize-space(.)='Upload one or more GIFs'])[1]/following::input[1]\").click({\n  force: true\n}); //upload photo\nit(\"upload photo\", function () {\n  cy.fixture('Hello.gif', 'base64').then(function (fileContent) {\n    cy.xpath(\"(.//*[normalize-space(text()) and normalize-space(.)='Upload one or more GIFs'])[1]/following::input[1]\").upload({\n      fileContent: fileContent,\n      fileName: 'Hello.png',\n      mimeType: 'image/gif'\n    }, {\n      uploadType: 'input'\n    });\n  });\n}); //=======================================\ncy.xpath(\"(.//*[normalize-space(text()) and normalize-space(.)='Add Tags'])[1]/following::input[1]\").type('FQA test test');\ncy.xpath(\"(.//*[normalize-space(text()) and normalize-space(.)='community guidelines'])[1]/following::button[1]\").click({\n  force: true\n});",
+            "err": {
+              "message": "CypressError: Timed out retrying: Expected to find element: 'input[id=\"search-box\"]', but never found it.",
+              "estack": "CypressError: Timed out retrying: Expected to find element: 'input[id=\"search-box\"]', but never found it.\n    at Object.cypressErr (https://giphy.com/__cypress/runner/cypress_runner.js:84573:11)\n    at Object.throwErr (https://giphy.com/__cypress/runner/cypress_runner.js:84538:18)\n    at Object.throwErrByPath (https://giphy.com/__cypress/runner/cypress_runner.js:84565:17)\n    at retry (https://giphy.com/__cypress/runner/cypress_runner.js:77812:16)\n    at https://giphy.com/__cypress/runner/cypress_runner.js:69764:18\n    at tryCatcher (https://giphy.com/__cypress/runner/cypress_runner.js:133768:23)\n    at Promise._settlePromiseFromHandler (https://giphy.com/__cypress/runner/cypress_runner.js:131786:31)\n    at Promise._settlePromise (https://giphy.com/__cypress/runner/cypress_runner.js:131843:18)\n    at Promise._settlePromise0 (https://giphy.com/__cypress/runner/cypress_runner.js:131888:10)\n    at Promise._settlePromises (https://giphy.com/__cypress/runner/cypress_runner.js:131963:18)\n    at Async._drainQueue (https://giphy.com/__cypress/runner/cypress_runner.js:128692:16)\n    at Async._drainQueues (https://giphy.com/__cypress/runner/cypress_runner.js:128702:10)\n    at Async.drainQueues (https://giphy.com/__cypress/runner/cypress_runner.js:128576:14)\n    at <anonymous>"
+            },
+            "isRoot": false,
+            "uuid": "a3682b19-6916-4dae-a96b-6aa24354966c",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [],
+        "failures": [
+          "a3682b19-6916-4dae-a96b-6aa24354966c"
+        ],
+        "pending": [],
+        "skipped": [],
+        "duration": 93091,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 2000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 2000
+  },
+  "copyrightYear": 2019
+}

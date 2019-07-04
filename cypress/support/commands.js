@@ -25,3 +25,16 @@
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
 import 'cypress-file-upload'
+
+
+Cypress.Commands.add('login', (accountName, accountPassword) => {
+
+    //click log
+    cy.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Create'])[1]/following::a[1]").click();
+    //field account name in email field
+    cy.get('input[name="email"]').type(accountName);
+    //field password in the account
+    cy.get('input[name="password"]').type(accountPassword);
+    //click sign in to log in page
+    cy.contains('Log in').click({force: true});
+});

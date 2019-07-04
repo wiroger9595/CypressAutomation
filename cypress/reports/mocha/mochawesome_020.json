@@ -1,0 +1,80 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 0,
+    "passes": 0,
+    "pending": 0,
+    "failures": 0,
+    "start": "2019-07-04T00:44:22.067Z",
+    "end": "2019-07-04T00:44:23.868Z",
+    "duration": 1801,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 1,
+    "hasOther": true,
+    "skipped": 1,
+    "hasSkipped": true,
+    "passPercentClass": "danger",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "3c82402e-784c-4ece-8ffd-c05d357bcb4c",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "e67e0cd9-904a-483e-aa5c-19c583a70ca2",
+        "title": "automationtest create and cancel account GIPHY ",
+        "fullFile": "",
+        "file": "",
+        "beforeHooks": [],
+        "afterHooks": [],
+        "tests": [
+          {
+            "title": "delete the account",
+            "fullTitle": "automationtest create and cancel account GIPHY  delete the account",
+            "duration": 1290,
+            "state": "failed",
+            "pass": false,
+            "fail": true,
+            "pending": false,
+            "code": "var doCancelAccount = new _CancelAccount.default();\ndoCancelAccount.clickSettingsForDeleteAccount();\ndoCancelAccount.clickDeleteYourAccount();\ndoCancelAccount.rewritePasswordToDeleteAccount(Cypress.env(\"reTypePassword\"));\ndoCancelAccount.clickFinalDeleteAccount();\ncy.percySnapshot();",
+            "err": {
+              "message": "TypeError: cy.percySnapshot is not a function\n\nBecause this error occurred during a 'before each' hook we are skipping the remaining tests in the current suite: 'automationtest create and c...'",
+              "estack": "TypeError: cy.percySnapshot is not a function\n\nBecause this error occurred during a 'before each' hook we are skipping the remaining tests in the current suite: 'automationtest create and c...'\n    at Context.<anonymous> (https://giphy.com/__cypress/tests?p=cypress/integration/ExcuteProcess/TestCreatAndCancel.js-479:270:8)"
+            },
+            "isRoot": false,
+            "uuid": "4612e77b-3dfe-4b94-9270-37303856e506",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [],
+        "failures": [
+          "4612e77b-3dfe-4b94-9270-37303856e506"
+        ],
+        "pending": [],
+        "skipped": [],
+        "duration": 1290,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 2000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 2000
+  },
+  "copyrightYear": 2019
+}

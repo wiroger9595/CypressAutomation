@@ -1,0 +1,61 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2019-07-03T23:38:03.586Z",
+    "end": "2019-07-03T23:38:05.386Z",
+    "duration": 1800,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "danger",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "c907f661-98cf-46bd-b49e-c79d600868c7",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [
+      {
+        "title": "An uncaught error was detected outside of a test",
+        "fullTitle": " An uncaught error was detected outside of a test",
+        "duration": 1467,
+        "state": "failed",
+        "pass": false,
+        "fail": true,
+        "pending": false,
+        "code": "throw err;",
+        "err": {
+          "message": "Uncaught ReferenceError: React is not defined\n\nThis error originated from your test code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your test code it will automatically fail the current test.\n\nCypress could not associate this error to any specific test.\n\nWe dynamically generated a new test to display this failure.",
+          "estack": "Uncaught ReferenceError: React is not defined\n\nThis error originated from your test code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your test code it will automatically fail the current test.\n\nCypress could not associate this error to any specific test.\n\nWe dynamically generated a new test to display this failure.\n    at Object.1 (https://giphy.com/__cypress/tests?p=cypress/integration/TestXHR/TestXHRspec.js-564:4:1)\n    at o (https://giphy.com/__cypress/tests?p=cypress/integration/TestXHR/TestXHRspec.js-564:1:265)\n    at r (https://giphy.com/__cypress/tests?p=cypress/integration/TestXHR/TestXHRspec.js-564:1:431)\n    at https://giphy.com/__cypress/tests?p=cypress/integration/TestXHR/TestXHRspec.js-564:1:460"
+        },
+        "isRoot": true,
+        "uuid": "183350ac-0c5d-4365-b246-3d820d5e2f9e",
+        "isHook": false,
+        "skipped": false
+      }
+    ],
+    "suites": [],
+    "passes": [],
+    "failures": [
+      "183350ac-0c5d-4365-b246-3d820d5e2f9e"
+    ],
+    "pending": [],
+    "skipped": [],
+    "duration": 1467,
+    "root": true,
+    "rootEmpty": false,
+    "_timeout": 2000
+  },
+  "copyrightYear": 2019
+}

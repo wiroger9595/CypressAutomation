@@ -1,6 +1,6 @@
 import Header from './Hearder';
 import SignInPage from './SignInPage';
-import SearchFunction from './SearchFunction';
+import FavoriteFunction from './FavoriteFunction';
 
 class HomePage {
   constructor() {
@@ -27,7 +27,7 @@ class HomePage {
   // }
 
   goToSearch(){
-       this.searchFunction = new SearchFunction();
+       this.FavoriteFunction = new FavoriteFunction();
 
   }
 

@@ -8,8 +8,7 @@ class UploadPhoto{
     }
     //================================ upload from internet ========================================
     pastePhotoOnURL(){
-        const clickCopyAndPasteAnyGifUrl = cy.xpath("(.//*[normalize-space(text()) and normalize-space(.)='COPY AND PASTE ANY GIF URL'])[1]/following::input[1]").click({force: true});
-                                                    
+        const clickCopyAndPasteAnyGifUrl = cy.xpath("(.//*[normalize-space(text()) and normalize-space(.)='COPY AND PASTE ANY GIF URL'])[1]/following::input[1]").click({force: true});                                           
         return clickCopyAndPasteAnyGifUrl;
     }
 
@@ -47,9 +46,11 @@ class UploadPhoto{
             return uploadPhotoFromLocalDrive;
     }
 
+    //=======================================================================================================================
+
     writeFQAOnAddTag(typeFQAtesttest){
         const writeFQATestTestOnAddTag = cy.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Add Tags'])[1]/following::input[1]").click();
-        writeFQATestTestOnAddTag.type('FQA test test');
+        writeFQATestTestOnAddTag.type(typeFQAtesttest);
         return typeFQAtesttest;
     }
 
