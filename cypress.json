@@ -1,26 +1,3 @@
 {
-    "video": true,  
-    "screenshotsFolder": "cypress/video",
-    "baseUrl": "https://giphy.com/",
-
-    "env":{
-        "username":"admin",
-        "NewEmail":"coolman935868@tata.cth",
-        "NewUsername":"learnCode234234",
-        "NewPassword": "12341234",
-        "reTypePassword":"12341234",
-        "notValidEmail": "coolman5858",
-        "searchPicture": "Canada",
-        "InputURLPhoto": "https://media1.giphy.com/media/3o85xt08p2Y0hanhwQ/source.gif",
-        "typeFQAtesttest": "FQA test test"
-        
-
-    },
-    "chromeWebSecurity": false,
-
-    "projectId": "comeToLearn",
-    "reporter": "cypress-multi-reporters",
-    "reporterOptions":{
-        "configFile": "reporterOptions.json"
-    }
+  "baseUrl": "http://localhost:3030"
 }
