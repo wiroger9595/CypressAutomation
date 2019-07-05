@@ -13,11 +13,12 @@ class CreateAccount{
     clickNewEmailAddress(NewEmail){
         const createNewEmail = cy.get('input[name="email"]').click({force: true});
         createNewEmail.type(NewEmail);
+
         return NewEmail;  
     }
 
     clickNewUsername(NewUsername){
-        const createNewUsername = cy.get('input[name="username"]').click({force: true});
+        const createNewUsername = cy.get('input[name="username"]').clear().click({force: true});
         
 
         createNewUsername.type(NewUsername);
@@ -26,7 +27,7 @@ class CreateAccount{
 
 
     clickNewPassword(NewPassword){
-        const createNewPoassword = cy.get('input[name="password"]').click({force: true});
+        const createNewPoassword = cy.get('input[name="password"]').clear().click({force: true});
         createNewPoassword.type(NewPassword);
         return NewPassword;  
     }

@@ -6,9 +6,15 @@ import InvalidEmail from "../CreateNewAccount/InvalidEmail"
 import CreateAccount from "../CreateNewAccount/CreateAccount";
 import CancelAccount from "../CreateNewAccount/CancelAccount";
 
+var i=0;
+for(i = 0;i<30;i++){
 describe('automationtest create and cancel account GIPHY ', () => {
     
     const home = new HomePage();
+
+    
+    
+
      beforeEach('Create New Account', () => {
       
       home.visit('/');
@@ -35,19 +41,21 @@ describe('automationtest create and cancel account GIPHY ', () => {
       //doCreateNewAccount.clickIamNotARobot();
       cy.wait(3000);
       doCreateNewAccount.clickAndCreateSignUp();
-
+      
     });
 
 
     it('delete the account' , () => {
+      for(var i = 0;i<=3;i++){
 
       const doCancelAccount = new CancelAccount();
       doCancelAccount.clickSettingsForDeleteAccount();
       doCancelAccount.clickDeleteYourAccount();
       doCancelAccount.rewritePasswordToDeleteAccount((Cypress.env("reTypePassword")));
       //doCancelAccount.clickFinalDeleteAccount();
-    
+      }
 
     }); 
-
+  
 });
+}

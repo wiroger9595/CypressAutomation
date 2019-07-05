@@ -9,7 +9,8 @@ import UploadPhoto from "../pageObjectModel/UploadPhoto";
 import SignOutPage from "../pageObjectModel/SignOutPage";
 
 
-
+var i=0;
+for(i = 0;i<30;i++){
 describe('automationtest GIPHY ', () => {
     
   const home = new HomePage();
@@ -40,35 +41,35 @@ describe('automationtest GIPHY ', () => {
     
 //======================================
     //Load from SearchFunction.js 
-    it('Search and found favorite', () => {
+    it('Search and found and delete favorite', () => {
           
-       const searchBox = new FavoriteFunction();
+       const searchAndTestFavorite = new FavoriteFunction();
        Cypress.currentTest.retries(2)
 
-       searchBox.clickSearchBox();
-       searchBox.writeInSearchBox(Cypress.env("searchPicture"));
-       searchBox.submitSearch();   
-       searchBox.clickFavoritePicture1();   
+       searchAndTestFavorite.clickSearchBox();
+       searchAndTestFavorite.writeInSearchBox(Cypress.env("searchPicture"));
+       searchAndTestFavorite.submitSearch();   
+       searchAndTestFavorite.clickFavoritePicture1();   
        cy.percySnapshot();
-       searchBox.clickFavorite();
+       searchAndTestFavorite.clickFavorite();
        cy.wait(3000);
-       searchBox.cancelFavorite();
+       searchAndTestFavorite.cancelFavorite();
 
     });
     //=========================================
 
 
      //Load from FavoriteAndSetting.js 
-     it('test favorite and setting function', () => {
+     it('test setting function', () => {
         Cypress.currentTest.retries(2);
 
         cy.wait(1000);
-        const TestingFavoriteAndSetting = new FavoriteAndSetting();
+        const TestingSetting = new SettingFunction();
 
         
-        SettingFunction.clickSetting();
-        SettingFunction.changeChannelfromPublicToPrivate();
-        SettingFunction.changeChannelfromPrivateToPublic();    
+        TestingSetting.clickSetting();
+        TestingSetting.changeChannelfromPublicToPrivate();
+        TestingSetting.changeChannelfromPrivateToPublic();    
         
         Cypress.currentTest.retries(2);
 
@@ -106,3 +107,4 @@ describe('automationtest GIPHY ', () => {
 
 
   });
+};
