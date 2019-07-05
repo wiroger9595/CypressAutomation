@@ -32,40 +32,42 @@ We would like you to build a Cypress.io(https://www.cypress.io/) -based applicat
 ## Post-work Questions
 
 1. What was the biggest challenge?
-
-Answer: 
-    It is difficult to handle reCAPTCHA, because reCAPTACH are recognized computer is operated by a computer or human, the computer has to answer the right question by selecting the right picture(I believe it needs machine learning and data analyst to teach the computer what is it in the photo). 
-
-    Also since I can't handle reCAPTCHA and delete an account(I can delete manually but not automation), that is the main reason I have two exciting file one can execute automatically and others have to manual execute. 
- 
+    
+    Answer: 
+    
+    It is difficult to automate reCAPTCHA, because reCAPTACH will recognize computer is controlled by a computer or human, plus there have visual recognize if reCAPTCHA think machine is controlling(I believe it needs some knowledge of machine learning and data analyst to teach the computer what is it in the photo). 
+    Also since I can't handle reCAPTCHA automatically and delete an account(I can delete manually but not automation), that is the main reason I have two exciting file one can execute automatically and others have to manual execute. 
 
 2. What would you have done differently in retrospect?
-
-Answer: 
-     I should make a design pattern at the beginning instead of finding the right element at the beginning I will design and define the page object model at the beginning, it will save more time.
+    
+    Answer: 
+    
+    Every time we finish the exploratory test, Design pattern and data strategy should start for when this project begins (of course define tool for automation should be priority, but Cypress.io being defined at the beginning) instead of writing the automation script after the exploratory test, it cause design and definition of each page object model have a higher uncertainty of editing or modification. Have a good design concept can organize the code but also save lots of time.
+     
 
 3. What would you have continued to do if you had more time?
-
-Answer:
-    I would like to use page factory that I might add more function for each page object model is there are new things coming up, also expanding for doing CI/CD, acceptance test and performance test since Cypress.io is relatively new and more function can apply on this test, if there is nothing else I can implement, then I would like to figure out how to automate reCAPTCHA.  
+    
+    Answer:
+    Using page factory can add more function for each page object model is there are new things coming up, also expanding for doing CI/CD, acceptance test and performance test since Cypress.io is relatively new and more function can apply to this test, if there is nothing else can implement, then how to automate reCAPTCHA will be put the last.  
 
 4. Describe some of the primary decisions you made in your implementation.
-Answer: Page Object Model(POM) is my primary decisions when I design automation script, main reason for design Page Object Model:
     
-Answer:
-    - Maintenance: people who want to edit or reuse the code can easily to find out where is the bug and where they can add when they doing integration or regression testing
-
-    - Reusability: since each function is as small as possible, try to make each object doing one acting, so other developers can reuse and plug into his work than building from scratch.
-
-    - Performance: In JAVA there is a concept for Stack Memory and Heap Space, Stack memory is used for executing the thread and Heap Space are allocate memory, when we run the program all the runtime into heap space and local variable been created and store in stack memory. It means when we run the program Heap Space run when the function is calling.  
-
-
-
-5. Any specific skills related to development that you didn't get to demonstrate here?
+    Answer: 
     
-Answer:
-    Data Provider - Selenium for JAVA can load the data from excel and execute for doing automation. In Cypress.io, you have to create the JSON file that not lots of people(I mean non-technical people) know how to enter the data in JSON file.
+    Page Object Model(POM) is the primary decisions when Test Automation designs their automation script, there have three reasons for design Page Object Model:  
+    
+    - Maintenance: Who wants to edit or reuse the code can easily to figure out where is the bug and where they can reuse when they doing integration or regression testing
+    
+    - Reusability: Since each function is aiming to make by doing one acting, so other developers or people who want to maintain the code can reuse and plug into his work than building from scratch.
+    
+    - Performance: In JAVA there is a concept for Stack Memory and Heap Space, Stack memory is used for executing the thread and Heap Space are allocate memory, when we run the program all the runtime into heap space and local variable been created and store in stack memory. It means when we run the program Heap Space run when the function is calling.    
 
-    Error handling - it always has an error that I should define not just Hppay Path but also Unhappy Path that I should create instruction for troubleshooting for any potential error will happen.
+5. Any specific skills related to development that you didn't get to demonstrate here?  
+    
+    Answer:
+    
+    Data Provider - Selenium for JAVA can load the data from excel and execute for doing automation. In Cypress.io, you have to create the JSON file that non-technical people know how to enter the data in JSON file.
+    
+    Error handling - it always has an exception happen during programming, otherwise, machine cannot recognize the next step. error handling should define not just Hppay Path but also Unhappy Path that it should create instruction for troubleshooting for any potential error happen.
 
 
